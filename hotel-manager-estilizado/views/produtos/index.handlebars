@@ -1,0 +1,25 @@
+<h2>Produtos</h2>
+
+<form action="/produtos/novo" method="POST" class="form-inline">
+  <input name="nome" placeholder="Nome do produto" required>
+  <input name="preco" placeholder="Preço" type="number" step="0.01" required>
+  <button type="submit">Adicionar</button>
+</form>
+
+{{#if produtos.length}}
+  <ul class="list">
+    {{#each produtos}}
+      <li>
+        <strong>{{nome}}</strong> — R$ {{preco}}
+        <div class="actions">
+          <form action="/produtos/delete/{{id}}" method="POST" style="display:inline;">
+            <button class="btn small">Excluir</button>
+          </form>
+          <a class="btn small link" href="/produtos/edit/{{id}}">Editar</a>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Nenhum produto cadastrado.</p>
+{{/if}}

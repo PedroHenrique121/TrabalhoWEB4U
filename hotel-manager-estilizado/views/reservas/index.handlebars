@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas</title>
+</head>
+<body>
+  <h1>Reservas</h1>
+
+  {{#if reservas.length}}
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Quarto</th>
+          <th>Dias</th>
+          <th>Tipo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each reservas}}
+          <tr>
+            <td>{{this.cliente}}</td>
+            <td>{{this.quarto}}</td>
+            <td>{{this.dias}}</td>
+            <td>{{this.tipo}}</td>
+            <td class="actions">
+              <a href="/reservas/editar/{{this.id}}" class="btn btn-edit">Editar</a>
+              <form action="/reservas/excluir/{{this.id}}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-delete">Excluir</button>
+              </form>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p>Nenhuma reserva cadastrada.</p>
+    <a href="/reservas/novo"><button class="btn btn-new">Adicionar Reserva</button></a>
+  {{/if}}
+</body>
+</html>

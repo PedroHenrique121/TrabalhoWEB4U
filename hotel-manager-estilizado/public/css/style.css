@@ -1,0 +1,167 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f6fa;
+  color: #2f4858;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background-image: url("/imagens/imagemhotelgenerica-fotor-2025111985631.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* NAV */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #d4af37;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* MAIN */
+main {
+  max-width: 1100px;
+  width: 90%;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULOS */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* FORMULÁRIOS */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+/* BOTÕES */
+button {
+  background-color: #d4af37;
+  border: none;
+  color: #2f4858;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #c19b2e;
+  transform: translateY(-1px);
+}
+
+/* BOTÃO EXCLUIR */
+form[style*="inline"] button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 6px 10px;
+}
+
+form[style*="inline"] button:hover {
+  background-color: #c0392b;
+}
+
+/* TABELAS */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #2f4858;
+  color: #ffffff;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #2f4858;
+  }
+}

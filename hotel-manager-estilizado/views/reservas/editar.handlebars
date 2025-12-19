@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Reserva</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Editar Reserva</h1>
+
+  <form action="/reservas/editar/{{reserva.id}}" method="POST">
+    <label for="cliente">Cliente:</label>
+    <input type="text" id="cliente" value="{{reserva.cliente}}" disabled>
+
+    <label for="quarto">Quarto:</label>
+    <input type="text" name="quarto" id="quarto" value="{{reserva.quarto}}" required>
+
+    <label for="dias">Dias:</label>
+    <input type="number" name="dias" id="dias" value="{{reserva.dias}}" required>
+
+    <label for="tipo">Tipo:</label>
+    <select name="tipo" id="tipo" required>
+      <option value="Simples" {{#if (eq reserva.tipo "Simples")}}selected{{/if}}>Simples</option>
+      <option value="Duplo" {{#if (eq reserva.tipo "Duplo")}}selected{{/if}}>Duplo</option>
+      <option value="Luxo" {{#if (eq reserva.tipo "Luxo")}}selected{{/if}}>Luxo</option>
+    </select>
+
+    <button type="submit" class="btn btn-edit">Salvar Alterações</button>
+  </form>
+  <a href="/reservas"><button class="btn btn-back">Voltar</button></a>
+</body>
+</html>

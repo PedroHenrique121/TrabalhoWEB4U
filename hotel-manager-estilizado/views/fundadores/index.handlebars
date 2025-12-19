@@ -1,0 +1,16 @@
+<h2>Fundadores</h2>
+
+<a href="/fundadores/novo">Novo Fundador</a>
+
+<ul>
+  {{#each fundadores}}
+    <li>
+      {{nome}} – {{participacao}}% – {{data_fundacao}}
+      <a href="/fundadores/editar/{{id}}">Editar</a>
+
+      <form action="/fundadores/excluir/{{id}}" method="post" style="display:inline">
+        <button type="submit">Excluir</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>

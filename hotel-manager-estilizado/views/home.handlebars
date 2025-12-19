@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.conteudo{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "C C C D D"
+                         "C C C D D"
+                         "C C C D D" ;
+
+}
+.partecima{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.dados{
+    grid-area: D;
+}
+.hotels_info {
+  grid-area: C;
+  display: flex;
+  gap: 20px;
+ 
+  margin-top: 50px;
+}
+.container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container img {
+  width: 70%;
+  display: flex;
+  border-radius: 5px;
+  box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.dados{
+    background-color: rgb(236, 236, 236);
+    margin-right: 40px;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 300px;
+}
+.dados article img{
+    max-width: 250px;
+    
+}
+</style>
+<body>
+   
+    <div class="partecima">
+    <h2>BEM VINDO, GERENCIAMENTO DO SKY-FALL</h2></div>
+     <div class="conteudo">
+   <div class="hotels_info">
+    <div class="container"><img src="https://www.salinas.com.br/_astro/01galleryy.sKouAwq2_Z1cKAqM.webp" alt="imagens de hotel" >
+    <h3>Suíte Familiar</h3>
+    <p>32 m² de conforto, com 2 camas king-size, varanda privativa e vista para o mar. Possui acesso direto à área da piscina, além de ar-condicionado, TV de 50" e Wi-Fi de alta velocidade. </p>
+   </div>
+   
+<div class="container">
+   <img src="https://image.dayuse.com/hotels/10126/8da411cc422cd2f5ecce75b2bc6416af-maritim-proarte-hotel-berlin.jpeg?twic=v1/resize=1080/quality=75" alt="imagens de hotel">
+   <h3>Suíte Dupla</h3>
+   <p>18 m², 1 cama king-size,vista ao mar, possui acesso direto à área da piscina, além de ar-condicionado, TV de 36"</p>
+   </div>
+
+<div class="container">
+   <img src="https://hotelespadarte.com.br/wp-content/uploads/2025/10/Imagem-01-4.png" alt="imagens de hotel">
+   <h3>Suíte Presidencial</h3>
+   <p>52 m², 1 cama king-size, closet privativo, jacuzzi, vista ao mar. Possui acesso direto à área da piscina e academia, além de ar-condicionado, TV de 60"</p>
+   </div>
+   </div>
+
+   <div class="dados">
+    <h2>Mais Solicitados</h2>
+    <article>
+    <h4>Suíte Familiar Skyfall, Recife-PE</h4>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRrlC41dqhf7yDCTg5N8GpUVWWmEfYs9xgLw&s" alt="hotel">
+   </article>
+   <article>
+    <h4>Suíte Júnior Skyfall, Recife-PE</h4>
+    <img src="https://palacepraia.com.br/wp-content/uploads/2022/10/suite-junior-1.webp" alt="hotel">
+   </article>
+   </div>
+   </div></div>
+
+
+
+</body>
+</html>

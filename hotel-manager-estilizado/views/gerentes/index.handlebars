@@ -1,0 +1,16 @@
+<h2>Gerentes</h2>
+
+<a href="/gerentes/novo">Novo</a>
+
+<ul>
+  {{#each gerentes}}
+    <li>
+      Nome: {{nome}} | Setor: {{setor}}
+      <a href="/gerentes/editar/{{id}}">Editar</a>
+
+      <form action="/gerentes/excluir/{{id}}" method="post" style="display:inline">
+        <button type="submit">Excluir</button>
+      </form>
+    </li>
+  {{/each}}
+</ul>
